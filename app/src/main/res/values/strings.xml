@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">LaundryClientMobile</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="forgot_password_string">Forgot Password</string>
+    <string name="_don_t_have_an_account___sign_up_string">Dont have an account ? Sign Up</string>
+    <string name="afternoon_morning__bin_laden_string">Afternoon/Morning, Bin Laden</string>
+    <string name="desc_string">Thinking of washing your clothes? There are ## laundry shops in your area.</string>
+    <string name="laundry_delivery_say_goodbye_to_dirty_clothes__string">Laundry DeliverySay Goodbye to dirty clothes!</string>
+    <string name="_start_washing_now__string">Start Washing Now!</string>
+    <string name="arrow_1">_arrow_1</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="_already_have_an_account___sign_in_string">Already have an account ? Sign In</string>
+    <string name="can_t_wait_to_serve_you__string">Cant wait to serve you!</string>
+    <string name="welcome_onboard__string">Welcome Onboard!</string>
+    <string name="register_string">Register</string>
+    <string name="enter_your_email_ek1_string">Enter your email</string>
+    <string name="enter_your_full_name_string">Enter your full name</string>
+    <string name="enter_password_ek1_string">Enter password</string>
+    <string name="confirm_password_string">Confirm Password</string>
+
+
+    <string name="title_activity_selected_shop">SelectedShop</string>
+    <string name="tab_text_1">Basic Items</string>
+    <string name="tab_text_2">Special Items</string>
+    <string name="tab_text_3">Dry Clean</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="special_items_fragment">Special Items Fragment</string>
+    <string name="selected_shop">Selected Shop</string>
+    <string name="dry_clean_fragment">Dry Clean Fragment</string>
+    <string name="basic_items_fragment">Basic Items Fragment</string>
+
+    <string name="bed_sheets___towels_string">BED SHEETS / TOWELS</string>
+    <string name="per_bag_max_3kg_string">per bag max 3kg</string>
+    <string name="php200_00_string">Php200.00</string>
+    <string name="add_string">ADD</string>
+    <string name="press___iron_string">PRESS / IRON</string>
+    <string name="machine_wash_string">MACHINE WASH</string>
+    <string name="hand_wash_ek1_string">HAND WASH</string>
+    <string name="home_string">Home</string>
+    <string name="wash_dry___fold__small__string">WASH DRY &amp;FOLD (LARGE)</string>
+    <string name="per_bag_max_8kg_string">Per bag max 8KG</string>
+    <string name="php300_00_string">Php300.00</string>
+    <string name="add_ek1_string">ADD</string>
+    <string name="wash_dry___fold__small__ek1_string">WASH DRY &amp;FOLD (SMALL)</string>
+    <string name="per_bag_max_5kg_string">Per bag max 5KG</string>
+    <string name="php200_00_ek1_string">Php200.00</string>
+    <string name="add_ek2_string">ADD</string>
+    <string name="hand_wash_hang_dry___fold_string">HAND WASH HANG-DRY &amp; FOLD</string>
+    <string name="per_bag_max_3kg_ek1_string">per bag max 3kg</string>
+    <string name="php350_00_string">Php350.00</string>
+    <string name="add_ek3_string">ADD</string>
+    <string name="press_iron_tops__long_sleeves__string">PRESS/IRON TOPS(LONG SLEEVES)</string>
+    <string name="per_price_string">per price</string>
+    <string name="php40_00_string">Php40.00</string>
+    <string name="add_ek4_string">ADD</string>
+    <string name="press_iron_tops__shorts_sleeves__string">PRESS/IRON TOPS(SHORTS SLEEVES)</string>
+    <string name="per_price_ek1_string">per price</string>
+    <string name="php35_00_string">Php35.00</string>
+    <string name="add_ek5_string">ADD</string>
+    <string name="press_iron__shorts_skirt__string">PRESS/IRON (SHORTS/SKIRT)</string>
+    <string name="per_price_ek2_string">per price</string>
+    <string name="php40_00_ek1_string">Php40.00</string>
+    <string name="add_ek6_string">ADD</string>
+    <string name="press_iron__pants__string">PRESS/IRON(PANTS)</string>
+    <string name="per_price_ek3_string">per price</string>
+    <string name="php40_00_ek2_string">Php40.00</string>
+    <string name="add_ek7_string">ADD</string>
+    <string name="get_your_clothes_clean_now_string">GET YOUR CLOTHES CLEAN NOW</string>
+    <string name="lorem_ipsum_dolor_sit_amet__consectetur_adipiscing_elit__interdum_dictum_tempus__interdum_at_dignissim_metus__ultricies_sed_nunc__string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum dictum tempus, interdum at dignissim metus. Ultricies sed nunc.</string>
+    <string name="get_started_string">Get Started</string>
+    <string name="search_string">Search for shops</string>
+    <string name="eric_vida_laundry_shop___afghanistan_string">Eric Vida Laundry Shop - Afghanistan</string>
+    <string name="search_ek2_string">Find Something you like</string>
+    <string name="laundry_shop_delivery_string">Laundry Shop Delivery</string>
+
+</resources>
