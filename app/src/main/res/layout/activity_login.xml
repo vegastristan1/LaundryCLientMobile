@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-99dp"
+                android:layout_marginLeft="-99dp"
                 android:layout_marginTop="-100dp">
 
                 <View
@@ -31,6 +32,7 @@
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_marginTop="70dp"
                     android:alpha="0.49000000953674"
                     android:background="@drawable/ellipse_1_shape" />
@@ -40,6 +42,7 @@
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:layout_marginStart="90dp"
+                    android:layout_marginLeft="90dp"
                     android:layout_marginTop="0dp"
                     android:alpha="0.49000000953674"
                     android:background="@drawable/ellipse_2_shape" />
@@ -51,12 +54,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/slice_5"
+                android:layout_alignLeft="@+id/slice_5"
                 android:layout_alignTop="@+id/slice_5"
                 android:layout_alignEnd="@+id/slice_5"
+                android:layout_alignRight="@+id/slice_5"
                 android:layout_alignBottom="@+id/slice_5"
                 android:layout_marginStart="44dp"
+                android:layout_marginLeft="44dp"
                 android:layout_marginTop="17dp"
                 android:layout_marginEnd="42dp"
+                android:layout_marginRight="42dp"
                 android:layout_marginBottom="20dp">
 
 
@@ -65,6 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_marginTop="0dp">
 
                     <ImageView
@@ -72,6 +80,7 @@
                         android:layout_width="84.77dp"
                         android:layout_height="170dp"
                         android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
                         android:contentDescription="path_33"
                         android:src="@drawable/path_33" />
@@ -81,6 +90,7 @@
                         android:layout_width="76.59dp"
                         android:layout_height="162.29dp"
                         android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
                         android:layout_marginTop="4dp"
                         android:contentDescription="path_34"
                         android:src="@drawable/path_34" />
@@ -90,6 +100,7 @@
                         android:layout_width="62.73dp"
                         android:layout_height="107.17dp"
                         android:layout_marginStart="11dp"
+                        android:layout_marginLeft="11dp"
                         android:layout_marginTop="31dp"
                         android:contentDescription="rectangle_18"
                         android:src="@drawable/rectangle_18" />
@@ -99,6 +110,7 @@
                         android:layout_width="12.15dp"
                         android:layout_height="12.15dp"
                         android:layout_marginStart="36dp"
+                        android:layout_marginLeft="36dp"
                         android:layout_marginTop="146dp"
                         android:contentDescription="ellipse_7"
                         android:src="@drawable/ellipse_7" />
@@ -111,6 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="105dp"
+                    android:layout_marginLeft="105dp"
                     android:layout_marginTop="50dp">
 
                     <ImageView
@@ -118,6 +131,7 @@
                         android:layout_width="67.15dp"
                         android:layout_height="13.26dp"
                         android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
                         android:contentDescription="rectangle_21_ek1"
                         android:src="@drawable/rectangle_21_ek1" />
@@ -127,6 +141,7 @@
                         android:layout_width="64.29dp"
                         android:layout_height="10.39dp"
                         android:layout_marginStart="1dp"
+                        android:layout_marginLeft="1dp"
                         android:layout_marginTop="1dp"
                         android:contentDescription="path_65_ek1"
                         android:src="@drawable/path_65_ek1" />
@@ -136,6 +151,7 @@
                         android:layout_width="7.92dp"
                         android:layout_height="7.92dp"
                         android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
                         android:layout_marginTop="3dp"
                         android:contentDescription="ellipse_10"
                         android:src="@drawable/ellipse_10" />
@@ -145,6 +161,7 @@
                         android:layout_width="39.09dp"
                         android:layout_height="0.86dp"
                         android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
                         android:layout_marginTop="5dp"
                         android:contentDescription="rectangle_22_ek1"
                         android:src="@drawable/rectangle_22_ek1" />
@@ -154,6 +171,7 @@
                         android:layout_width="39.09dp"
                         android:layout_height="0.86dp"
                         android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
                         android:layout_marginTop="7dp"
                         android:contentDescription="rectangle_23_ek1"
                         android:src="@drawable/rectangle_23_ek1" />
@@ -165,6 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="49dp"
+                    android:layout_marginLeft="49dp"
                     android:layout_marginTop="39dp">
 
                     <ImageView
@@ -172,6 +191,7 @@
                         android:layout_width="4.39dp"
                         android:layout_height="6.71dp"
                         android:layout_marginStart="21dp"
+                        android:layout_marginLeft="21dp"
                         android:layout_marginTop="111dp"
                         android:contentDescription="path_16"
                         android:src="@drawable/path_16" />
@@ -181,6 +201,7 @@
                         android:layout_width="34.51dp"
                         android:layout_height="52.27dp"
                         android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="61dp"
                         android:contentDescription="path_17"
                         android:src="@drawable/path_17" />
@@ -190,6 +211,7 @@
                         android:layout_width="16.49dp"
                         android:layout_height="7.86dp"
                         android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
                         android:layout_marginTop="78dp"
                         android:contentDescription="path_18"
                         android:src="@drawable/path_18" />
@@ -199,6 +221,7 @@
                         android:layout_width="8.36dp"
                         android:layout_height="13.67dp"
                         android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
                         android:layout_marginTop="116dp"
                         android:contentDescription="path_19"
                         android:src="@drawable/path_19" />
@@ -208,6 +231,7 @@
                         android:layout_width="6.72dp"
                         android:layout_height="15.57dp"
                         android:layout_marginStart="26dp"
+                        android:layout_marginLeft="26dp"
                         android:layout_marginTop="77dp"
                         android:contentDescription="path_20"
                         android:src="@drawable/path_20" />
@@ -217,6 +241,7 @@
                         android:layout_width="8.79dp"
                         android:layout_height="12.49dp"
                         android:layout_marginStart="19dp"
+                        android:layout_marginLeft="19dp"
                         android:layout_marginTop="14dp"
                         android:contentDescription="path_21"
                         android:src="@drawable/path_21" />
@@ -226,6 +251,7 @@
                         android:layout_width="25.9dp"
                         android:layout_height="45.16dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="19dp"
                         android:contentDescription="path_22"
                         android:src="@drawable/path_22" />
@@ -235,6 +261,7 @@
                         android:layout_width="8.12dp"
                         android:layout_height="13.18dp"
                         android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
                         android:layout_marginTop="38dp"
                         android:contentDescription="path_23"
                         android:src="@drawable/path_23" />
@@ -244,6 +271,7 @@
                         android:layout_width="12.74dp"
                         android:layout_height="9.02dp"
                         android:layout_marginStart="11dp"
+                        android:layout_marginLeft="11dp"
                         android:layout_marginTop="41dp"
                         android:contentDescription="path_24"
                         android:src="@drawable/path_24" />
@@ -253,6 +281,7 @@
                         android:layout_width="16.24dp"
                         android:layout_height="13.18dp"
                         android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
                         android:layout_marginTop="38dp"
                         android:alpha="0.10000000149012"
                         android:contentDescription="path_25"
@@ -263,6 +292,7 @@
                         android:layout_width="13.21dp"
                         android:layout_height="13.21dp"
                         android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
                         android:layout_marginTop="5dp"
                         android:contentDescription="ellipse_5"
                         android:src="@drawable/ellipse_5" />
@@ -272,6 +302,7 @@
                         android:layout_width="17.91dp"
                         android:layout_height="13.62dp"
                         android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
                         android:layout_marginTop="0dp"
                         android:contentDescription="path_26"
                         android:src="@drawable/path_26" />
@@ -281,6 +312,7 @@
                         android:layout_width="24.28dp"
                         android:layout_height="14.23dp"
                         android:layout_marginStart="13dp"
+                        android:layout_marginLeft="13dp"
                         android:layout_marginTop="33dp"
                         android:contentDescription="path_27"
                         android:src="@drawable/path_27" />
@@ -290,6 +322,7 @@
                         android:layout_width="9.06dp"
                         android:layout_height="15.26dp"
                         android:layout_marginStart="29dp"
+                        android:layout_marginLeft="29dp"
                         android:layout_marginTop="22dp"
                         android:contentDescription="path_28"
                         android:src="@drawable/path_28" />
@@ -299,6 +332,7 @@
                         android:layout_width="7.29dp"
                         android:layout_height="11.45dp"
                         android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
                         android:layout_marginTop="28dp"
                         android:contentDescription="path_29"
                         android:src="@drawable/path_29" />
@@ -310,6 +344,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="105dp"
+                    android:layout_marginLeft="105dp"
                     android:layout_marginTop="31dp">
 
                     <ImageView
@@ -317,6 +352,7 @@
                         android:layout_width="67.15dp"
                         android:layout_height="13.26dp"
                         android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
                         android:contentDescription="rectangle_21"
                         android:src="@drawable/rectangle_21" />
@@ -326,6 +362,7 @@
                         android:layout_width="64.29dp"
                         android:layout_height="10.39dp"
                         android:layout_marginStart="1dp"
+                        android:layout_marginLeft="1dp"
                         android:layout_marginTop="1dp"
                         android:contentDescription="path_65"
                         android:src="@drawable/path_65" />
@@ -335,6 +372,7 @@
                         android:layout_width="7.92dp"
                         android:layout_height="7.92dp"
                         android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
                         android:layout_marginTop="3dp"
                         android:contentDescription="path_67"
                         android:src="@drawable/path_67" />
@@ -344,6 +382,7 @@
                         android:layout_width="39.09dp"
                         android:layout_height="0.86dp"
                         android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
                         android:layout_marginTop="5dp"
                         android:contentDescription="rectangle_22"
                         android:src="@drawable/rectangle_22" />
@@ -353,6 +392,7 @@
                         android:layout_width="39.09dp"
                         android:layout_height="0.86dp"
                         android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
                         android:layout_marginTop="7dp"
                         android:contentDescription="rectangle_23"
                         android:src="@drawable/rectangle_23" />
@@ -364,6 +404,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="105dp"
+                    android:layout_marginLeft="105dp"
                     android:layout_marginTop="69dp">
 
                     <ImageView
@@ -371,6 +412,7 @@
                         android:layout_width="67.15dp"
                         android:layout_height="13.26dp"
                         android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
                         android:contentDescription="rectangle_21_ek2"
                         android:src="@drawable/rectangle_21_ek2" />
@@ -380,6 +422,7 @@
                         android:layout_width="64.29dp"
                         android:layout_height="10.39dp"
                         android:layout_marginStart="1dp"
+                        android:layout_marginLeft="1dp"
                         android:layout_marginTop="1dp"
                         android:contentDescription="path_65_ek2"
                         android:src="@drawable/path_65_ek2" />
@@ -389,6 +432,7 @@
                         android:layout_width="7.92dp"
                         android:layout_height="7.92dp"
                         android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
                         android:layout_marginTop="3dp"
                         android:contentDescription="ellipse_10_ek1"
                         android:src="@drawable/ellipse_10_ek1" />
@@ -398,6 +442,7 @@
                         android:layout_width="39.09dp"
                         android:layout_height="0.86dp"
                         android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
                         android:layout_marginTop="5dp"
                         android:contentDescription="rectangle_22_ek2"
                         android:src="@drawable/rectangle_22_ek2" />
@@ -407,6 +452,7 @@
                         android:layout_width="39.09dp"
                         android:layout_height="0.86dp"
                         android:layout_marginStart="17dp"
+                        android:layout_marginLeft="17dp"
                         android:layout_marginTop="7dp"
                         android:contentDescription="rectangle_23_ek2"
                         android:src="@drawable/rectangle_23_ek2" />
@@ -421,82 +467,114 @@
                 android:layout_height="206dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="171dp"
                 android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
                 android:alpha="0"
                 android:contentDescription="slice_2"
                 android:src="@drawable/slice_2" />
 
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="303dp"
-                android:layout_height="51dp"
-                android:layout_below="@+id/username"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="54dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginEnd="59dp"
-                android:background="@color/white"
-                android:hint="@string/prompt_password"
-                android:imeActionLabel="@string/action_sign_in_short"
-                android:imeOptions="actionDone"
-                android:inputType="textPassword"
-                android:selectAllOnFocus="true" />
-
-            <EditText
-                android:id="@+id/username"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
                 android:layout_width="300dp"
-                android:layout_height="55dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/slice_5"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="58dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="54dp"
+                android:layout_marginLeft="56dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginEnd="58dp"
-                android:background="@color/white"
-                android:hint="@string/prompt_email"
-                android:inputType="textEmailAddress"
-                android:selectAllOnFocus="true"
-                tools:background="@color/white" />
+                android:layout_marginRight="58dp"
+                tools:layout_below="@id/slice_5"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="148dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Username" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/textInputPassword"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputEmail"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="54dp"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="59dp"
+                android:layout_marginRight="59dp"
+                app:passwordToggleEnabled="true"
+                tools:layout_below="@id/textInputEmail"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="148dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <Button
                 android:id="@+id/buttonLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/password"
+                android:layout_below="@+id/textInputPassword"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_gravity="start"
                 android:layout_marginStart="122dp"
+                android:layout_marginLeft="122dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="123dp"
+                android:layout_marginRight="123dp"
                 android:layout_marginBottom="64dp"
-                android:text="@string/action_sign_in" />
+                android:text="@string/action_sign_in_short" />
 
             <ProgressBar
-                android:id="@+id/loading"
+                android:id="@+id/progressBarLogIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="64dp"
-                android:visibility="gone" />
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/buttonDont_have_an_account_sign_up"
+                android:id="@+id/buttonSign_up"
                 android:layout_width="241dp"
                 android:layout_height="26dp"
-                android:layout_below="@+id/password"
+                android:layout_below="@+id/textInputPassword"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="center_horizontal|center"
                 android:layout_marginStart="83dp"
+                android:layout_marginLeft="83dp"
                 android:layout_marginTop="139dp"
                 android:layout_marginEnd="92dp"
+                android:layout_marginRight="92dp"
                 android:layout_marginBottom="17dp"
                 android:gravity="center"
                 android:text="@string/_don_t_have_an_account___sign_up_string"
@@ -504,16 +582,20 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/forgot_password2"
+                android:id="@+id/forgot_password"
                 android:layout_width="125dp"
                 android:layout_height="26dp"
-                android:layout_below="@+id/password"
+                android:layout_below="@+id/textInputPassword"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_gravity="center_horizontal|center"
                 android:layout_marginStart="233dp"
+                android:layout_marginLeft="233dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="58dp"
+                android:layout_marginRight="58dp"
                 android:gravity="center"
                 android:text="@string/forgot_password_string"
                 android:textColor="@color/forgot_password_color"

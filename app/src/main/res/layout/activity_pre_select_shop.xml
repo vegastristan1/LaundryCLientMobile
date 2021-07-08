@@ -26,14 +26,16 @@
             android:layout_height="173dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/rectangle_24_shape" />
+            android:background="@drawable/rectangle_24_shape"
+            android:layout_marginLeft="0dp" />
 
         <RelativeLayout
             android:id="@+id/shape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="-99dp"
-            android:layout_marginTop="-100dp">
+            android:layout_marginTop="-100dp"
+            android:layout_marginLeft="-99dp">
 
             <View
                 android:id="@+id/ellipse_1"
@@ -42,7 +44,8 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="70dp"
                 android:alpha="0.49000000953674"
-                android:background="@drawable/ellipse_1_shape" />
+                android:background="@drawable/ellipse_1_shape"
+                android:layout_marginLeft="0dp" />
 
             <View
                 android:id="@+id/ellipse_2"
@@ -51,7 +54,8 @@
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="0dp"
                 android:alpha="0.49000000953674"
-                android:background="@drawable/ellipse_2_shape" />
+                android:background="@drawable/ellipse_2_shape"
+                android:layout_marginLeft="90dp" />
 
         </RelativeLayout>
 
@@ -72,10 +76,14 @@
             android:shadowRadius="4"
             android:text="@string/desc_string"
             android:textColor="@color/welcome_back__color"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="201dp" />
 
         <TextView
-            android:id="@+id/afternoon_morning__bin_laden"
+            android:id="@+id/textViewAfternoonMorningName"
             android:layout_width="199dp"
             android:layout_height="22dp"
             android:layout_below="@+id/rectangle_"
@@ -93,7 +101,11 @@
             android:text="@string/afternoon_morning__bin_laden_string"
             android:textColor="@color/welcome_back__color"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="194dp" />
 
         <RelativeLayout
             android:id="@+id/order_button"
@@ -104,7 +116,11 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="37dp"
             android:layout_marginEnd="43dp"
-            android:layout_marginBottom="82dp">
+            android:layout_marginBottom="82dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="43dp">
 
             <View
                 android:id="@+id/rectangle_28"
@@ -112,7 +128,8 @@
                 android:layout_height="188dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
-                android:background="@drawable/rectangle_28_shape" />
+                android:background="@drawable/rectangle_28_shape"
+                android:layout_marginLeft="0dp" />
 
             <View
                 android:id="@+id/_rectangle_29"
@@ -120,7 +137,8 @@
                 android:layout_height="38dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="137dp"
-                android:background="@drawable/_rectangle_29_shape" />
+                android:background="@drawable/_rectangle_29_shape"
+                android:layout_marginLeft="10dp" />
 
             <TextView
                 android:id="@+id/buttonStart_washing_now"
@@ -130,7 +148,8 @@
                 android:layout_marginTop="147dp"
                 android:text="@string/_start_washing_now__string"
                 android:textColor="@color/welcome_back__color"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:layout_marginLeft="25dp" />
 
             <ImageView
                 android:id="@+id/_arrow_1"
@@ -139,7 +158,8 @@
                 android:layout_marginStart="171dp"
                 android:layout_marginTop="110dp"
                 android:contentDescription="@string/arrow_1"
-                android:src="@drawable/_arrow_1" />
+                android:src="@drawable/_arrow_1"
+                android:layout_marginLeft="171dp" />
 
             <TextView
                 android:id="@+id/laundry_delivery_say_goodbye_to_dirty_clothes_"
@@ -149,7 +169,8 @@
                 android:layout_marginTop="94dp"
                 android:text="@string/laundry_delivery_say_goodbye_to_dirty_clothes__string"
                 android:textColor="@color/_sign_in_color"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:layout_marginLeft="16dp" />
 
         </RelativeLayout>
     </RelativeLayout>

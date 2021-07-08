@@ -1,123 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.shop.ShopActivity">
-    <RelativeLayout
-        android:id="@+id/content_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
         <RelativeLayout
             android:id="@+id/page_shops_select_ek1"
             android:layout_marginTop="0dp"
             android:layout_marginStart="0dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp">
 
             <View
                 android:id="@+id/_bg__shops_select_ek2"
-                android:background="@drawable/_bg__shops_select_ek2_shape"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="0dp"
-                android:layout_width="374dp"
-                android:layout_height="812dp" />
+                android:background="@drawable/_bg__shops_select_ek2_shape" />
 
             <View
                 android:id="@+id/background"
-                android:background="@drawable/background_shape"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
                 android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="0dp"
-                android:layout_width="374dp"
-                android:layout_height="185dp" />
+                android:background="@drawable/background_shape" />
 
 
             <RelativeLayout
                 android:id="@+id/shops_selection"
-                android:layout_marginTop="562dp"
-                android:layout_marginStart="33dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp">
 
 
                 <RelativeLayout
                     android:id="@+id/shops_selection_box"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginStart="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp">
 
-
-                    <RelativeLayout
-                        android:id="@+id/shop_1"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <View
-                            android:id="@+id/shop_1_ek1"
-                            android:background="@drawable/shop_1_ek1_shape"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_width="236dp"
-                            android:layout_height="207dp" />
-
-                        <TextView
-                            android:id="@+id/eric_vida_laundry_shop___afghanistan"
-                            android:textStyle="bold"
-                            android:layout_gravity="center_horizontal|center"
-                            android:gravity="center"
-                            android:textSize="15sp"
-                            android:shadowRadius="4"
-                            android:shadowColor="#000000"
-                            android:shadowDx="0"
-                            android:shadowDy="4"
-                            android:textColor="@color/_sign_in_color"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginTop="86dp"
-                            android:layout_width="189dp"
-                            android:layout_height="44.5dp"
-                            android:text="@string/eric_vida_laundry_shop___afghanistan_string" />
-                    </RelativeLayout>
-
-
-                    <RelativeLayout
-                        android:id="@+id/shop_2"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginStart="251dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <View
-                            android:id="@+id/shop_2_ek1"
-                            android:background="@drawable/shop_2_ek1_shape"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_width="236dp"
-                            android:layout_height="207dp" />
-
-                    </RelativeLayout>
-
-
-                    <RelativeLayout
-                        android:id="@+id/shop_2_ek2"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginStart="502dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <View
-                            android:id="@+id/shop_2_ek3"
-                            android:background="@drawable/shop_2_ek3_shape"
-                            android:layout_marginStart="0dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_width="236dp"
-                            android:layout_height="207dp" />
-
-                    </RelativeLayout>
-
+                    <GridView
+                        android:id="@+id/gridview"
+                        android:layout_width="390dp"
+                        android:layout_height="match_parent"
+                        android:numColumns="2"
+                        android:horizontalSpacing="4dp"
+                        android:verticalSpacing="4dp" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -128,7 +66,8 @@
                 android:layout_marginTop="-109dp"
                 android:layout_marginStart="-99dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-99dp">
 
                 <View
                     android:id="@+id/ellipse_1_ek4"
@@ -137,7 +76,8 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="70dp"
                     android:layout_width="200dp"
-                    android:layout_height="200dp" />
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="0dp" />
 
                 <View
                     android:id="@+id/ellipse_2_ek4"
@@ -146,18 +86,19 @@
                     android:layout_marginStart="90dp"
                     android:layout_marginTop="0dp"
                     android:layout_width="200dp"
-                    android:layout_height="200dp" />
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="90dp" />
 
             </RelativeLayout>
 
 
             <RelativeLayout
                 android:id="@+id/search_ek1"
-                android:layout_marginTop="500dp"
+                android:layout_marginTop="200dp"
                 android:layout_marginStart="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-               >
+                android:layout_marginLeft="25dp">
 
                 <View
                     android:id="@+id/rectangle_2_ek7"
@@ -165,7 +106,8 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="0dp"
                     android:layout_width="325dp"
-                    android:layout_height="51dp" />
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="0dp" />
 
                 <TextView
                     android:id="@+id/search_ek2"
@@ -175,8 +117,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_width="178dp"
                     android:layout_height="27.5dp"
-                    android:text="@string/search_ek2_string"
-                    />
+                    android:text="@string/search_ek2_string" />
 
             </RelativeLayout>
 
@@ -186,22 +127,22 @@
                 android:layout_marginStart="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                >
+                android:layout_marginLeft="20dp">
 
                 <View android:id="@+id/desc_and_back_ek1"
                     android:background="@drawable/desc_and_back_ek1_shape"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="0dp"
                     android:layout_width="342dp"
-                    android:layout_height="35dp" />
+                    android:layout_height="35dp"
+                    tools:ignore="RtlCompat" />
 
-                <ImageView android:id="@+id/_back"
-                    android:src="@drawable/_back"
-                    android:contentDescription="_back"
-                    android:layout_marginStart="11dp"
-                    android:layout_marginTop="17dp"
-                    android:layout_width="17dp"
-                    android:layout_height="0dp" />
+                <Button
+                    android:id="@+id/buttonBackShop"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="-50dp"
+                    android:background="@drawable/_back" />
 
                 <TextView
                     android:id="@+id/laundry_shop_delivery"
@@ -211,23 +152,16 @@
                     android:layout_marginTop="3dp"
                     android:layout_width="179dp"
                     android:layout_height="25dp"
-                    android:text="@string/laundry_shop_delivery_string"
-                    />
+                    android:text="@string/laundry_shop_delivery_string" />
 
                 <TextView
                     android:id="@+id/home"
                     android:textColor="@color/welcome_back__color"
                     android:layout_marginLeft="44dp"
                     android:layout_marginTop="17dp"
-                    android:layout_width="33dp"
+                    android:layout_width="50dp"
                     android:layout_height="19dp"
-                    android:text="@string/home_string"
-                    />
-
+                    android:text="@string/home_string" />
             </RelativeLayout>
-
         </RelativeLayout>
-
-
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
