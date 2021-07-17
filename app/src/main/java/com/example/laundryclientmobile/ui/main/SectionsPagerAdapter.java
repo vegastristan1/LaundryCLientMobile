@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.laundryclientmobile.R;
 import com.example.laundryclientmobile.fragment.BasicFragment;
 import com.example.laundryclientmobile.fragment.DryCleanFragment;
-import com.example.laundryclientmobile.fragment.SpacialFragment;
+import com.example.laundryclientmobile.fragment.SpecialFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -38,7 +38,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new BasicFragment();
                 break;
             case 1:
-                fragment = new SpacialFragment();
+                fragment = new SpecialFragment();
                 break;
             case 2:
                 fragment = new DryCleanFragment();

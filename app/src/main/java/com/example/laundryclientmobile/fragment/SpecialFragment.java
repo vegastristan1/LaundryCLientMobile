@@ -1,7 +1,5 @@
 package com.example.laundryclientmobile.fragment;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -28,7 +26,6 @@ import com.example.laundryclientmobile.apiconnection.Store;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,10 +35,10 @@ import static android.view.View.GONE;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BasicFragment#newInstance} factory method to
+ * Use the {@link SpecialFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BasicFragment extends Fragment {
+public class SpecialFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,7 +59,8 @@ public class BasicFragment extends Fragment {
 
     List<Service> serviceList;
     List<Store> storeList;
-    public BasicFragment() {
+
+    public SpecialFragment() {
         // Required empty public constructor
     }
 
@@ -72,11 +70,11 @@ public class BasicFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BasicFragment.
+     * @return A new instance of fragment SpacialFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BasicFragment newInstance(String param1, String param2) {
-        BasicFragment fragment = new BasicFragment();
+    public static SpecialFragment newInstance(String param1, String param2) {
+        SpecialFragment fragment = new SpecialFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -94,13 +92,14 @@ public class BasicFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_basic, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_special, container, false);
         View dataView = inflater.inflate(R.layout.activity_selected_shop, container, false);
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_basic, container, false);
-        listView = view.findViewById(R.id.listViewBasicItems);
-        progressBar = view.findViewById(R.id.progressBarBasicServiceList);
+        //return inflater.inflate(R.layout.fragment_special, container, false);
+        listView = view.findViewById(R.id.listViewSpecialItems);
+        progressBar = view.findViewById(R.id.progressBarSpecialServiceList);
         storeTitle = dataView.findViewById(R.id.textViewTitle);
 
         serviceList = new ArrayList<>();
@@ -120,9 +119,9 @@ public class BasicFragment extends Fragment {
     private void readItemCategoryByStore(String getStoreTitle) {
         HashMap<String, String> params = new HashMap<>();
         params.put("store_name", String.valueOf(getStoreTitle));
-        params.put("category_name_type", "Basic Items");
+        params.put("category_name_type", "Special Items");
 
-        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_ITEM_LIST_BY_CATEGORY_TO_STORE, params, CODE_POST_REQUEST);
+        SpecialFragment.PerformNetworkRequest request = new SpecialFragment.PerformNetworkRequest(Api.URL_READ_ITEM_LIST_BY_CATEGORY_TO_STORE, params, CODE_POST_REQUEST);
         request.execute();
     }
 
@@ -144,7 +143,7 @@ public class BasicFragment extends Fragment {
 
         }
 
-        ServiceAdapter adapter = new ServiceAdapter(serviceList);
+        SpecialFragment.ServiceAdapter adapter = new SpecialFragment.ServiceAdapter(serviceList);
         listView.setAdapter(adapter);
     }
 
@@ -195,7 +194,7 @@ public class BasicFragment extends Fragment {
         }
     }
 
-    class ServiceAdapter extends ArrayAdapter<com.example.laundryclientmobile.apiconnection.Service> {
+    class ServiceAdapter extends ArrayAdapter<Service> {
         List<Service> serviceList;
 
         public ServiceAdapter(List<Service> serviceList) {
@@ -222,56 +221,6 @@ public class BasicFragment extends Fragment {
             textViewItemDesc.setText(service.getServices_desc());
             textViewItemPrice.setText(service.getServices_price());
             //add more here to make a visual of the variable
-
-            /*//attaching click listener to update
-            updateService.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    //so when it is updating we will
-                    //make the isUpdating as true
-                    isUpdating = true;
-
-                    //we will set the selected hero to the UI elements
-                    editTextServiceId.setText(String.valueOf(service.getId()));
-                    editTextServiceName.setText(String.valueOf(service.getServices_name()));
-                    editTextServicePrice.setText(String.valueOf(service.getServices_price()));
-                    editTextServiceDesc.setText(String.valueOf(service.getServices_desc()));
-                    spinnerItem.setSelection(((ArrayAdapter<String>) spinnerItem.getAdapter()).getPosition(service.getItem_name()));
-                    spinnerCategories.setSelection(((ArrayAdapter<String>) spinnerCategories.getAdapter()).getPosition(service.getCategory_name()));
-
-                    //we will also make the button text to Update
-                    dialog_btn.setText("Update");
-                    dialog.show();
-                }
-            });*/
-
-            /*//when the user selected delete
-            deleteService.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    // we will display a confirmation dialog before deleting
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-
-                    builder.setTitle("Delete " + service.getStore_name())
-                            .setMessage("Are you sure you want to delete it?")
-                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    //if the choice is yes we will delete the hero
-                                    //method is commented because it is not yet created
-                                    deleteHero(service.getId());
-                                }
-                            })
-                            .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                }
-                            })
-                            .setIcon(android.R.drawable.ic_dialog_alert)
-                            .show();
-
-                }
-            });*/
-
             return listViewItem;
         }
     }

@@ -14,7 +14,6 @@ public class Customer {
         this.customer_password = customer_password;
     }
 
-
     public int getId() {
         return id;
     }

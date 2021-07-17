@@ -17,6 +17,16 @@ public class SharedPrefManager {
     private static final String KEY_PASSWORD = "keypassword";
     private static final String KEY_ID = "keyid";
 
+    private static final String KEY_SERVICES_ID = "keyservicesid";
+    private static final String KEY_SERVICES_NAME = "keyservicesname";
+    private static final String KEY_SERVICES_PRICE = "keyservicesprice";
+    private static final String KEY_SERVICES_DESC = "keyservicesdesc";
+    private static final String KEY_ITEM_NAME_TYPE = "keyitemnametype";
+    private static final String KEY_CATEGORY_NAME_TYPE = "keycategorynametype";
+    private static final String KEY_STORE_NAME = "keystorename";
+
+    private static final String KEY_STORE_TITLE_NAME = "keystoretitlename";
+
     private static SharedPrefManager mInstance;
     private static Context mCtx;
 
@@ -73,5 +83,49 @@ public class SharedPrefManager {
         editor.clear();
         editor.apply();
         mCtx.startActivity(new Intent(mCtx, LoginActivity.class));
+    }
+
+    //this method will store the service data in shared preferences
+    public void selectedService(Service service) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(KEY_SERVICES_ID, service.getId());
+        editor.putString(KEY_SERVICES_NAME, service.getServices_name());
+        editor.putString(KEY_SERVICES_PRICE, service.getServices_price());
+        editor.putString(KEY_SERVICES_DESC, service.getServices_desc());
+        editor.putString(KEY_ITEM_NAME_TYPE, service.getItem_name());
+        editor.putString(KEY_CATEGORY_NAME_TYPE, service.getCategory_name());
+        editor.putString(KEY_STORE_NAME, service.getStore_name());
+        editor.apply();
+    }
+
+    //
+    public Service getService() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return new Service(
+                sharedPreferences.getInt(KEY_SERVICES_ID, -1),
+                sharedPreferences.getString(KEY_SERVICES_NAME, null),
+                sharedPreferences.getString(KEY_SERVICES_PRICE, null),
+                sharedPreferences.getString(KEY_SERVICES_DESC, null),
+                sharedPreferences.getString(KEY_ITEM_NAME_TYPE, null),
+                sharedPreferences.getString(KEY_CATEGORY_NAME_TYPE, null),
+                sharedPreferences.getString(KEY_STORE_NAME, null)
+        );
+    }
+
+    //this method will store the service data in shared preferences
+    public void selectedStore(String holdTitle) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_STORE_TITLE_NAME, holdTitle);
+        editor.apply();
+    }
+
+    //
+    public HoldTitle getStore() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return new HoldTitle(
+                sharedPreferences.getString(KEY_STORE_TITLE_NAME, null)
+        );
     }
 }

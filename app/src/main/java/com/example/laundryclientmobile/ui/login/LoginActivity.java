@@ -7,24 +7,20 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.laundryclientmobile.MainActivity;
 import com.example.laundryclientmobile.R;
+import com.example.laundryclientmobile.apiconnection.Api;
 import com.example.laundryclientmobile.apiconnection.Customer;
 import com.example.laundryclientmobile.apiconnection.RequestHandler;
 import com.example.laundryclientmobile.apiconnection.SharedPrefManager;
-import com.example.laundryclientmobile.apiconnection.URLs;
 import com.example.laundryclientmobile.ui.extra.PreSelectShopActivity;
 import com.example.laundryclientmobile.ui.signup.SignupActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 
@@ -37,6 +33,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
 
         //if the user is already logged in we will directly start the profile activity
         if (SharedPrefManager.getInstance(this).isLoggedIn()) {
@@ -149,7 +148,7 @@ public class LoginActivity extends AppCompatActivity {
                 params.put("customer_password", customer_password);
 
                 //returing the response
-                return requestHandler.sendPostRequest(URLs.URL_LOGIN, params);
+                return requestHandler.sendPostRequest(Api.URL_LOGIN, params);
             }
         }
 

@@ -3,17 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.BasicFragment">
+    tools:context=".fragment.SpecialFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
     <ListView
-        android:id="@+id/listViewBasicItems"
+        android:id="@+id/listViewSpecialItems"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <ProgressBar
-        android:id="@+id/progressBarBasicServiceList"
+        android:id="@+id/progressBarSpecialServiceList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
