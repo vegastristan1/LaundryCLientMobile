@@ -1,45 +1,32 @@
 package com.example.laundryclientmobile;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.icu.text.SymbolTable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.laundryclientmobile.fragment.BasicFragment;
-import com.example.laundryclientmobile.models.Cart;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.laundryclientmobile.models.Controller;
 import com.example.laundryclientmobile.models.Service;
-import com.example.laundryclientmobile.models.Store;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
-
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
+import java.util.Date;
 
 public class CartActivity extends AppCompatActivity {
 
     ListView listViewCartItem;
     ListView listViewPaymentItem;
     Double totalPrice = (double) 0.0;
-    float tempPrice;
-    int qty = 1;
-
-    String[] arrayListCartQty;
 
     Button addButton;
     Button minusButton;
@@ -65,6 +52,8 @@ public class CartActivity extends AppCompatActivity {
         grandTotalPrice = findViewById(R.id.textViewGrandTotalPrice);
         cartTotalPrice = findViewById(R.id.textViewCartTotalPrice);
 
+        Date currentTime = Calendar.getInstance().getTime();
+
         showStoreName.setText(titleSelectShop);
 
         cartList = new ArrayList<>();
@@ -84,6 +73,16 @@ public class CartActivity extends AppCompatActivity {
             }
         });
 
+        cartTotalPrice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String pattern = "yyyy-MM-dd";
+                SimpleDateFormat formatter = new SimpleDateFormat(pattern);
+                String mysqlDateString = formatter.format(currentTime);
+                System.out.println("Java's Default Date Format: " + currentTime);
+                System.out.println("Mysql's Default Date Format: " + mysqlDateString);
+            }
+        });
     }
 
     @Override
