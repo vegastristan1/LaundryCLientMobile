@@ -1,4 +1,4 @@
-package com.example.laundryclientmobile.apiconnection;
+package com.example.laundryclientmobile.models;
 
 public class Store {
     private int id;

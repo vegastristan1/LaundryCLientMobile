@@ -1,12 +1,13 @@
 package com.example.laundryclientmobile.fragment;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,97 +19,52 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.laundryclientmobile.R;
+import com.example.laundryclientmobile.SelectedShopActivity;
 import com.example.laundryclientmobile.apiconnection.Api;
-import com.example.laundryclientmobile.apiconnection.HoldTitle;
+import com.example.laundryclientmobile.models.Controller;
+import com.example.laundryclientmobile.models.HoldTitle;
 import com.example.laundryclientmobile.apiconnection.RequestHandler;
-import com.example.laundryclientmobile.apiconnection.Service;
+import com.example.laundryclientmobile.models.Service;
 import com.example.laundryclientmobile.apiconnection.SharedPrefManager;
-import com.example.laundryclientmobile.apiconnection.Store;
+import com.example.laundryclientmobile.models.Store;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import static android.view.View.GONE;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link BasicFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class BasicFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final int CODE_GET_REQUEST = 1024;
     private static final int CODE_POST_REQUEST = 1025;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
     ListView listView;
     ProgressBar progressBar;
-    TextView textViewItemName;
     TextView storeTitle;
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
     String getStoreTitle;
+    String noOfItemInCart = "0";
 
     List<Service> serviceList;
-    List<Store> storeList;
-    public BasicFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BasicFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static BasicFragment newInstance(String param1, String param2) {
-        BasicFragment fragment = new BasicFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_basic, container, false);
         View dataView = inflater.inflate(R.layout.activity_selected_shop, container, false);
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_basic, container, false);
+
         listView = view.findViewById(R.id.listViewBasicItems);
         progressBar = view.findViewById(R.id.progressBarBasicServiceList);
         storeTitle = dataView.findViewById(R.id.textViewTitle);
 
         serviceList = new ArrayList<>();
-        storeList = new ArrayList<>();
 
         HoldTitle holdTitle = SharedPrefManager.getInstance(getContext()).getStore();
 
-        //setting the values to the textviews
         storeTitle.setText(holdTitle.getStore_name());
 
         getStoreTitle = storeTitle.getText().toString();
@@ -172,7 +128,7 @@ public class BasicFragment extends Fragment {
             try {
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")) {
-                    Toast.makeText(getContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
                     refreshServiceList(object.getJSONArray("services"));
                 }
             } catch (JSONException e) {
@@ -195,8 +151,10 @@ public class BasicFragment extends Fragment {
         }
     }
 
-    class ServiceAdapter extends ArrayAdapter<com.example.laundryclientmobile.apiconnection.Service> {
+    class ServiceAdapter extends ArrayAdapter<Service> {
         List<Service> serviceList;
+
+        final Controller aController = (Controller) getActivity().getApplicationContext();
 
         public ServiceAdapter(List<Service> serviceList) {
             super(listView.getContext(), R.layout.layout_of_services, serviceList);
@@ -208,11 +166,9 @@ public class BasicFragment extends Fragment {
             LayoutInflater inflater = getLayoutInflater();
             View listViewItem = inflater.inflate(R.layout.layout_of_services, null, true);
 
-            //Button updateService = listViewItem.findViewById(R.id.buttonEditServiceItem);
-            //Button deleteService = listViewItem.findViewById(R.id.buttonDeleteServiceItem);
-            Button buttonAdd = listViewItem.findViewById(R.id.buttonAdd);
+            Button buttonAdd = listViewItem.findViewById(R.id.buttonAddToCart);
 
-            textViewItemName = listViewItem.findViewById(R.id.textViewItemName);
+            TextView textViewItemName = listViewItem.findViewById(R.id.textViewItemName);
             TextView textViewItemDesc = listViewItem.findViewById(R.id.textViewItemDesc);
             TextView textViewItemPrice = listViewItem.findViewById(R.id.textViewItemPrice);
 
@@ -222,6 +178,38 @@ public class BasicFragment extends Fragment {
             textViewItemDesc.setText(service.getServices_desc());
             textViewItemPrice.setText(service.getServices_price());
             //add more here to make a visual of the variable
+
+            //Create click listener for dynamically created button
+            buttonAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    //Clicked button index
+                    Log.i("TAG", "Basic Fragment Item Position:" + position);
+
+                    // Get product instance for index
+                    Service tempServiceObject = serviceList.get(position);
+
+                    //Check Product already exist in Cart or Not
+                    if(!aController.getCart().checkServiceInCart(tempServiceObject))
+                    {
+                        buttonAdd.setText("Added");
+                        //tempServiceObject.setItem_qty(1);
+                        // Product not Exist in cart so add product to
+                        // Cart product arraylist
+                        aController.getCart().setService(tempServiceObject);
+                        //Toast.makeText(getContext(), "Now Cart size: "+aController.getCart().getCartSize(), Toast.LENGTH_LONG).show();
+                        noOfItemInCart = String.valueOf(aController.getCart().getCartSize());
+                        SelectedShopActivity selectedShopActivity = (SelectedShopActivity) getActivity();
+                        selectedShopActivity.setNoOfItemInCart(noOfItemInCart);
+                    }
+                    else
+                    {
+                        // Cart product arraylist contains Product
+                        Toast.makeText(getContext(),"Service "+(position + 1)+" already added in cart.", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
 
             /*//attaching click listener to update
             updateService.setOnClickListener(new View.OnClickListener() {

@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -21,7 +20,7 @@ import android.widget.Toast;
 import com.example.laundryclientmobile.R;
 import com.example.laundryclientmobile.SelectedShopActivity;
 import com.example.laundryclientmobile.apiconnection.RequestHandler;
-import com.example.laundryclientmobile.apiconnection.Store;
+import com.example.laundryclientmobile.models.Store;
 import com.example.laundryclientmobile.ui.extra.PreSelectShopActivity;
 
 import org.json.JSONArray;
@@ -149,15 +148,15 @@ public class ShopActivity extends AppCompatActivity {
         }
     }
 
-    class CustomAdapter extends ArrayAdapter<com.example.laundryclientmobile.apiconnection.Store> {
-        private final List<com.example.laundryclientmobile.apiconnection.Store> storeList;
+    class CustomAdapter extends ArrayAdapter<Store> {
+        private final List<Store> storeList;
 
         private String[] imageNames;
         private int[] imagePhoto;
         private Context context;
         private LayoutInflater layoutInflater;
 
-        public CustomAdapter(List<com.example.laundryclientmobile.apiconnection.Store> storeList) {
+        public CustomAdapter(List<Store> storeList) {
             super(ShopActivity.this, R.layout.layout_custom_shop_list, storeList);
             this.storeList = storeList;
         }

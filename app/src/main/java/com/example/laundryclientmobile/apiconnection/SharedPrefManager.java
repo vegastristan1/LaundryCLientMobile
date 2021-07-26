@@ -4,6 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+import com.example.laundryclientmobile.models.Customer;
+import com.example.laundryclientmobile.models.HoldTitle;
+import com.example.laundryclientmobile.models.Service;
 import com.example.laundryclientmobile.ui.login.LoginActivity;
 
 public class SharedPrefManager {

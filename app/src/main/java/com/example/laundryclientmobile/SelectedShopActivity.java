@@ -1,19 +1,16 @@
 package com.example.laundryclientmobile;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 
-import com.example.laundryclientmobile.apiconnection.Api;
-import com.example.laundryclientmobile.apiconnection.HoldTitle;
-import com.example.laundryclientmobile.apiconnection.RequestHandler;
 import com.example.laundryclientmobile.apiconnection.SharedPrefManager;
-import com.example.laundryclientmobile.ui.extra.PreSelectShopActivity;
+import com.example.laundryclientmobile.fragment.BasicFragment;
+import com.example.laundryclientmobile.models.Controller;
 import com.example.laundryclientmobile.ui.shop.ShopActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,27 +22,18 @@ import android.widget.Toast;
 import com.example.laundryclientmobile.ui.main.SectionsPagerAdapter;
 import com.example.laundryclientmobile.databinding.ActivitySelectedShopBinding;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-
 public class SelectedShopActivity extends AppCompatActivity {
 
     Button buttonProfile;
-
     String titleSelectShop;
-
-    TextView textViewtitle;
-
+    TextView textViewTitle, noOfItemInCart;
     private ActivitySelectedShopBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Bundle bundle = getIntent().getExtras();
-
+        final Controller aController = (Controller) getApplicationContext();
         binding = ActivitySelectedShopBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -54,24 +42,16 @@ public class SelectedShopActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = binding.fab;
 
-        textViewtitle = binding.textViewTitle;
+        noOfItemInCart = binding.noOfItemInCart;
+        textViewTitle = binding.textViewTitle;
 
         titleSelectShop = bundle.getString("name");
 
-        textViewtitle.setText(titleSelectShop);
+        textViewTitle.setText(titleSelectShop);
 
         //storing the user in shared preferences
         SharedPrefManager.getInstance(getApplicationContext()).selectedStore(titleSelectShop);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         findViewById(R.id.buttonBackSelectedShop).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,5 +61,32 @@ public class SelectedShopActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), ShopActivity.class));
             }
         });
+
+        noOfItemInCart.setText(aController.getCart().getCartSize() + " Item >");
+        noOfItemInCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(noOfItemInCart.getText().toString().equals("Item >")){
+                    Toast.makeText(SelectedShopActivity.this, "No Item In Cart!", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent i = new Intent(getApplicationContext(), CartActivity.class);
+                    i.putExtra("name", textViewTitle.getText().toString());
+                    startActivity(i);
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    public void setNoOfItemInCart(String countInCart){
+        if(1 >= Integer.parseInt(countInCart)){
+            noOfItemInCart.setText(countInCart + " Item >");
+        } else{
+            noOfItemInCart.setText(countInCart + " Item's >");
+        }
     }
 }

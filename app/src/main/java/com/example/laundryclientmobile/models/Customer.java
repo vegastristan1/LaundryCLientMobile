@@ -1,4 +1,4 @@
-package com.example.laundryclientmobile.apiconnection;
+package com.example.laundryclientmobile.models;
 
 public class Customer {
     private int id;

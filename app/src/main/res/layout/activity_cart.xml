@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity"
+    android:background="@color/per_bag_max_3kg_color">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:background="@color/border2_color"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonBackToSelectedShop"
+            android:layout_width="43dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="32dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="28dp"
+            android:layout_toEndOf="@+id/imageButtonBackToSelectedShop"
+            android:layout_toRightOf="@+id/imageButtonBackToSelectedShop"
+            android:text="Cart"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewStoreNameCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/imageButtonBackToSelectedShop"
+            android:layout_toRightOf="@+id/imageButtonBackToSelectedShop"
+            android:text="Store Name"
+            android:textColor="@color/forgot_password_color"
+            android:textSize="18sp"
+            tools:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutItemList"
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
+        android:layout_below="@+id/relativeLayoutTop"
+        android:layout_marginTop="5dp"
+        android:background="@color/border2_color"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutPaymentInfo"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayoutTop">
+
+        <ListView
+            android:id="@+id/listViewCartItemList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutPaymentInfo"
+        android:layout_width="match_parent"
+        android:layout_height="366dp"
+        android:layout_below="@+id/relativeLayoutItemList"
+        android:background="@color/border2_color"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutProcess">
+
+        <TextView
+            android:id="@+id/textViewPaymentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:text="Payment Summary"
+            android:textSize="20sp" />
+
+        <ListView
+            android:id="@+id/listViewPaymentSummaryList"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_below="@+id/textViewPaymentTitle"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_below="@+id/listViewPaymentSummaryList"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewGrandTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="Grand Total"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/textViewGrandTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text="Php XX.xx"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutProcess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayoutPaymentInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/forgot_password_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="Process to checkout"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textViewCartTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Total Price"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

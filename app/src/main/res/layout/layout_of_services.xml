@@ -16,14 +16,16 @@
 
     <TextView
         android:id="@+id/textViewItemPrice"
-        android:layout_width="220dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-
+        android:layout_width="112dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:gravity="center"
         android:text="@string/php200_00_ek1_string"
         android:textColor="@color/welcome_back__color"
-        app:layout_constraintStart_toEndOf="@+id/photo_ek"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewItemDesc" />
 
     <ImageView
@@ -37,21 +39,22 @@
         android:layout_marginRight="3dp"
         android:contentDescription="photo_ek1"
         android:src="@drawable/photo_ek1"
-        app:layout_constraintEnd_toStartOf="@+id/textViewItemPrice"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/package_box"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/buttonAddToCart"
+        android:layout_width="81dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="44dp"
         android:text="@string/add_ek1_string"
+        android:textSize="12sp"
+        app:layout_constraintRight_toLeftOf="@+id/textViewItemPrice"
         app:layout_constraintStart_toEndOf="@+id/photo_ek"
-        app:layout_constraintTop_toBottomOf="@+id/textViewItemPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemDesc" />
 
     <TextView
         android:id="@+id/textViewItemName"

@@ -9,8 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.laundryclientmobile.R;
-import com.example.laundryclientmobile.SelectedShopActivity;
-import com.example.laundryclientmobile.apiconnection.Customer;
+import com.example.laundryclientmobile.models.Customer;
 import com.example.laundryclientmobile.apiconnection.SharedPrefManager;
 import com.example.laundryclientmobile.ui.shop.ShopActivity;
 
@@ -42,16 +41,16 @@ public class PreSelectShopActivity extends AppCompatActivity {
         int timeOfDay = c.get(Calendar.HOUR_OF_DAY);
 
         if(timeOfDay >= 0 && timeOfDay < 12){
-            Toast.makeText(this, "Good Morning", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Good Morning", Toast.LENGTH_SHORT).show();
             textViewAfternoonMorningName.setText("Good Morning: " + customer.getCustomer_name());
         }else if(timeOfDay >= 12 && timeOfDay < 16){
-            Toast.makeText(this, "Good Afternoon", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Good Afternoon", Toast.LENGTH_SHORT).show();
             textViewAfternoonMorningName.setText("Good Afternoon: " + customer.getCustomer_name());
         }else if(timeOfDay >= 16 && timeOfDay < 21){
-            Toast.makeText(this, "Good Evening", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Good Evening", Toast.LENGTH_SHORT).show();
             textViewAfternoonMorningName.setText("Good Evening: " + customer.getCustomer_name());
         }else if(timeOfDay >= 21 && timeOfDay < 24){
-            Toast.makeText(this, "Good Night", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Good Night", Toast.LENGTH_SHORT).show();
             textViewAfternoonMorningName.setText("Good Night: " + customer.getCustomer_name());
         }
     }

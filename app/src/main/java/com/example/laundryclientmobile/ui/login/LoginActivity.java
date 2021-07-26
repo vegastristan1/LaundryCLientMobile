@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.laundryclientmobile.R;
 import com.example.laundryclientmobile.apiconnection.Api;
-import com.example.laundryclientmobile.apiconnection.Customer;
+import com.example.laundryclientmobile.models.Customer;
 import com.example.laundryclientmobile.apiconnection.RequestHandler;
 import com.example.laundryclientmobile.apiconnection.SharedPrefManager;
 import com.example.laundryclientmobile.ui.extra.PreSelectShopActivity;
